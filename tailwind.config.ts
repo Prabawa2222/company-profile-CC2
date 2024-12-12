@@ -9,10 +9,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#e0ebe5",
+        dark: "#020404",
+        accent: "var(--color-accent)",
+      },
+      fontFamily: {
+        InterRegular: ["var(--font-inter-regular)"],
+        InterLight: ["var(--font-inter-light)"],
+        PolyItalic: ["var(--font-poly-italic)"],
+        PolyRegular: ["var(--font-poly-regular)"],
+        ArchivoExtendedBold: ["var(--archivo-extended-bold)"],
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 } satisfies Config;
