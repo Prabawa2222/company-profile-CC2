@@ -21,22 +21,24 @@ const Navbar = () => {
 
   return (
     <div
-      className={`p-5 w-full flex flex-row items-center justify-between ${
+      className={`py-5 px-10 w-full flex flex-row items-center justify-between ${
         isScrolled ? "bg-white shadow-md" : "bg-transparent"
       } z-10 fixed transition-all duration-300`}
     >
       <div>
-        <Image
-          src={"./svg/logo_dice.svg"}
-          alt="logo-dice"
-          width={150}
-          height={150}
-        />
+        <Link href={"/"}>
+          <Image
+            src={"./svg/logo_dice.svg"}
+            alt="logo-dice"
+            width={200}
+            height={200}
+          />
+        </Link>
       </div>
-      <div className="flex flex-row px-5 gap-8 font-ArchivoExtendedBold text-black text-xl">
-        <Link href={"/About"}>About Us</Link>
-        <Link href={"/About"}>Service</Link>
-        <Link href={"/About"}>Team</Link>
+      <div className="flex flex-row px-5 font-PolyRegular bold gap-8 text-black text-xl">
+        <Link href={"/about"}>About Us</Link>
+        <Link href={"/services"}>Services</Link>
+        <Link href={"/teams"}>Teams</Link>
       </div>
     </div>
   );

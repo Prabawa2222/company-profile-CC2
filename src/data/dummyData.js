@@ -21,6 +21,41 @@ export const dataProducts = [
   },
 ];
 
+export const dataServices = [
+  {
+    id: 1,
+    iconSrc: "/svg/icon_dice_white.svg",
+    text: "Precision Farming",
+    imageSrc: "/img/section_1.jpg",
+    description:
+      "Leverage cutting-edge GPS technology and data analytics for optimized crop management.",
+  },
+  {
+    id: 2,
+    iconSrc: "/svg/icon_dice_white.svg",
+    text: "Smart Agriculture",
+    imageSrc: "/img/section_2.jpg",
+    description:
+      "Integrate AI with farming systems for real-time data-driven decision-making.",
+  },
+  {
+    id: 3,
+    iconSrc: "/svg/icon_dice_white.svg",
+    text: "Sustainable Practices",
+    imageSrc: "/img/section_3.jpg",
+    description:
+      "Adopt eco-friendly farming methods that reduce environmental impact.",
+  },
+  {
+    id: 4,
+    iconSrc: "/svg/icon_dice_white.svg",
+    text: "Agri-Tech Innovation",
+    imageSrc: "/img/section_4.jpg",
+    description:
+      "Innovative solutions to modernize agricultural processes and increase efficiency.",
+  },
+];
+
 export const dummyTestimonial = [
   {
     id: 1,

@@ -24,7 +24,7 @@ const polyRegular = localFont({
 });
 
 const archivoExtraBold = localFont({
-  src: "./fonts/Archivo_ExtraCondensed-ExtraBold.woff",
+  src: "./fonts/Archivo-ExtraBold.ttf",
   variable: "--font-archivo-extra-bold",
 });
 

@@ -18,7 +18,7 @@ export default {
         InterLight: ["var(--font-inter-light)"],
         PolyItalic: ["var(--font-poly-italic)"],
         PolyRegular: ["var(--font-poly-regular)"],
-        ArchivoExtendedBold: ["var(--archivo-extended-bold)"],
+        ArchivoExtraBold: ["var(--font-archivo-extra-bold)", "sans-serif"],
       },
     },
   },
