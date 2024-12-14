@@ -11,12 +11,12 @@ interface HeroProps {
 }
 
 const HeroSection: React.FC<HeroProps> = ({ src, height, width, content }) => {
-  const [fontSize, setfontSize] = useState(1);
+  const [scale, setScale] = useState(1); // State to control scaling
 
   const handleScroll = () => {
     const scrollPosition = window.scrollY;
-    const newFontSize = Math.max(0.5, 1 - scrollPosition / 500);
-    setfontSize(newFontSize);
+    const newScale = Math.max(0.5, 1 - scrollPosition / 500); // Shrink dynamically
+    setScale(newScale);
   };
 
   useEffect(() => {
@@ -25,25 +25,33 @@ const HeroSection: React.FC<HeroProps> = ({ src, height, width, content }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [fontSize]);
+  }, []);
+
+  const textSizeClass =
+    content.length > 10 ? "lg:text-4xl text-3xl" : "lg:text-8xl text-5xl";
+
   return (
-    <div className="flex flex-col items-center justify-center mt-32 overflow-hidden relative">
-      <h1
-        style={{
-          transform: `scale(${fontSize})`,
-          transition: "transform 0.2s ease",
-        }}
-        className="absolute tracking-tight w-96 font-ArchivoExtraBold text-4xl text-white text-center"
-      >
-        {content}
-      </h1>
+    <div className="relative flex flex-col items-center justify-center mt-16 lg:mt-24 transition-transform">
+      <div className="absolute">
+        <h1
+          className={`tracking-tight w-full font-ArchivoExtraBold ${textSizeClass} text-white text-center`}
+          style={{
+            transform: `scale(${scale})`,
+            transition: "transform 0.2s ease",
+          }}
+        >
+          {content}
+        </h1>
+      </div>
       <Image
-        className="rounded-lg"
+        className="rounded-lg lg:w-[920px] lg:h-[450px] w-[420px] "
         src={src}
         height={height}
         width={width}
         alt="hero-image"
-        style={{ objectFit: "none", height: "500px" }}
+        style={{
+          objectFit: "cover",
+        }}
       />
     </div>
   );

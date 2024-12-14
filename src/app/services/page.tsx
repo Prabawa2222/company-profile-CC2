@@ -11,17 +11,17 @@ import React from "react";
 
 const ServicesPage = () => {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen w-full bg-white flex flex-col snap-y snap-mandatory overflow-y-scroll verflow-hidden">
       <div className="flex flex-col items-center">
-        <div className="bg-primary w-full h-[450px]">
+        <section className="bg-primary w-full h-[450px] snap-always snap-center">
           <HeroSection
             src={"/img/hero_dice.jpg"}
             width={1000}
             height={200}
             content={"Product & Service"}
           />
-        </div>
-        <section className="flex flex-col items-center lg:w-2/3 py-16 mt-32 w-0.9">
+        </section>
+        <section className="snap-always snap-center flex flex-col items-center lg:w-2/3 py-16 mt-32 w-0.9">
           <h1 className="font-PolyRegular tracking-tight text-black text-5xl py-10">
             Our Offerings
           </h1>
@@ -53,7 +53,7 @@ const ServicesPage = () => {
         </section>
         <section className="py-8 h-96 flex flex-col items-center">
           <div className="flex flex-col items-center py-10">
-            <h1 className="font-PolyRegular tracking-tight text-black text-5xl p-8">
+            <h1 className="font-PolyRegular italic tracking-tight text-black text-4xl p-8">
               Ready to revolutionize your farming? Contact us today!
             </h1>
             <button className="btn my-10 text-white font-PolyRegular text-xl hover:bg-gray-800">

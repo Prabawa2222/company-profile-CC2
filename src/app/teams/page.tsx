@@ -23,7 +23,7 @@ const TeamsPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className=" bg-white flex flex-col">
       <div className="flex flex-col items-center">
         <div className="bg-primary w-full h-[450px]">
           <HeroSection
@@ -37,7 +37,7 @@ const TeamsPage = () => {
           <h1 className="font-PolyRegular tracking-tight text-black text-5xl py-10">
             Here’s Our Team
           </h1>
-          <div className="grid grid-cols-3  items-center space-y-5 gap-5">
+          <div className="grid grid-cols-3 items-center space-y-0 gap-5">
             {teams.map((item, index) => (
               <CardTeams key={index} teams={item} />
             ))}
