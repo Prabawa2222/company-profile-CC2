@@ -1,12 +1,13 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -22,8 +23,10 @@ const Navbar = () => {
   return (
     <div className="fixed top-0 z-50 w-full bg-primary">
       <nav
-        className={`p-5 lg:py-5 lg:px-10 z-50 lg:z-0  flex flex-row items-center justify-between transition-all duration-300 ${
-          isScrolled ? "bg-white shadow-md" : "lg:bg-transparent bg-primary"
+        className={`p-5 lg:py-5 lg:px-10 z-50 lg:z-0 flex flex-row items-center justify-between transition-all duration-300 ${
+          isScrolled
+            ? "bg-white drop-shadow-md"
+            : "lg:bg-transparent bg-primary"
         }`}
       >
         <div>
@@ -33,6 +36,7 @@ const Navbar = () => {
               alt="logo-dice"
               width={200}
               height={200}
+              priority
             />
           </Link>
         </div>
@@ -47,15 +51,27 @@ const Navbar = () => {
             className="text-black text-3xl"
           >
             {isOpen ? (
-              <img src="/svg/icon_close.svg" className="w-6 h-6" />
+              <Image
+                src="/svg/icon_close.svg"
+                alt="Close menu"
+                width={24}
+                height={24}
+                loading="lazy"
+              />
             ) : (
-              <img src="/svg/icon_hamburger.svg" className="w-6 h-6" />
+              <Image
+                src="/svg/icon_hamburger.svg"
+                alt="Open menu"
+                width={24}
+                height={24}
+                loading="lazy"
+              />
             )}
           </button>
         </div>
       </nav>
       <div
-        className={`absolute top-20 left-0 w-full text-2xl text-black bg-white flex flex-col items-center space-y-4 py-5 overflow-hidden transition-all duration-300 ${
+        className={`absolute top-20 left-0 w-full drop-shadow-md text-2xl text-black bg-white flex flex-col items-center space-y-4 py-5 overflow-hidden transition-all duration-300 ${
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >

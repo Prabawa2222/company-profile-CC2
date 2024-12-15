@@ -31,6 +31,7 @@ const Footer = () => {
         height={200}
         className="lg:p-8 p-3"
         alt="logo-dice"
+        loading="lazy"
       />
     </div>
   );

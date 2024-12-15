@@ -21,6 +21,7 @@ interface Team {
 
 const AboutPage = () => {
   const [teams, setTeams] = useState<Team[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchUsers() {
@@ -30,9 +31,10 @@ const AboutPage = () => {
         const users = data.results;
 
         setTeams(users);
-        console.log(data);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching users:", error);
+        setLoading(false);
       }
     }
     fetchUsers();
@@ -88,7 +90,7 @@ const AboutPage = () => {
             </h1>
             <div className="grid lg:grid-cols-3 grid-cols-2 justify-items-center mx-4 py-8">
               {teams.map((item, index) => (
-                <CardTeams key={index} teams={item} />
+                <CardTeams key={index} teams={item} loading={loading} />
               ))}
             </div>
             <button className="btn my-10 text-white font-PolyRegular text-xl hover:bg-gray-800">

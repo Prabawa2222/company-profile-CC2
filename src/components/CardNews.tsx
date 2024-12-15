@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const CardNews = () => {
   return (
@@ -12,7 +13,13 @@ const CardNews = () => {
         </span>
         <div className="border-2 w-full flex justify-between mt-5 p-2 rounded-sm">
           <p className="text-sm">Your Email</p>
-          <img src="/svg/mail.svg" />
+          <Image
+            src="/svg/mail.svg"
+            alt="Mail Icon"
+            width={24}
+            height={24}
+            loading="lazy"
+          />
         </div>
         <button className="p-2 bg-dark text-sm text-white w-full mt-2 rounded-lg">
           Subscribe
