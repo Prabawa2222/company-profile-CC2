@@ -4,7 +4,7 @@ import CardTestimonial from "@/components/CardTestimonial";
 import HeroSection from "@/components/HeroSection";
 import Image from "next/image";
 import { dataProducts, slicedTestimonials } from "../data/dummyData";
-import React, { useEffect, useState, Suspense, lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import FadeAnim from "@/components/FadeAnim";
 
 const LazyFadeAnim = lazy(() => import("@/components/FadeAnim"));

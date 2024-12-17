@@ -4,7 +4,6 @@ import CardTeams from "@/components/CardTeams";
 import Carousel from "@/components/Carousel";
 import FadeAnim from "@/components/FadeAnim";
 import HeroSection from "@/components/HeroSection";
-import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 

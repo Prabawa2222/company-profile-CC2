@@ -8,11 +8,6 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#e0ebe5",
-        dark: "#020404",
-        accent: "var(--color-accent)",
-      },
       fontFamily: {
         InterRegular: ["var(--font-inter-regular)"],
         InterLight: ["var(--font-inter-light)"],
@@ -20,7 +15,14 @@ export default {
         PolyRegular: ["var(--font-poly-regular)"],
         ArchivoExtraBold: ["var(--font-archivo-extra-bold)", "sans-serif"],
       },
+      colors: {
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        primary: "#1a73e8", // Custom primary color
+        secondary: "#fbbc05", // Custom secondary color
+        accent: "#34b7f1", // Custom accent color
+      },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [],
 } satisfies Config;

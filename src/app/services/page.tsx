@@ -3,14 +3,9 @@
 import CardService from "@/components/CardService";
 import CardTestimonial from "@/components/CardTestimonial";
 import HeroSection from "@/components/HeroSection";
-import {
-  dataProducts,
-  dataServices,
-  slicedTestimonials,
-} from "@/data/dummyData";
+import { dataServices, slicedTestimonials } from "@/data/dummyData";
 import Link from "next/link";
 import React from "react";
-import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai";
 
 const ServicesPage = () => {
   const slideLeft = () => {
